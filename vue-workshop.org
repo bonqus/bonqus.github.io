@@ -1,0 +1,66 @@
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+
+
+#+Title: Vue.js + Quasar
+#+AUTHOR: Mathias (mbr)
+
+* Introduction
+** The directives
+  - *v-model* two way binding
+  - *: (or v-bind:)* one way binding used with attributes 
+  - *@ (or v-on:)* catch event 
+  - *v-if* logical render
+  - *v-else-if* used on v-if siblings
+  - *v-else* used on v-if siblings
+  - *v-for* loops
+  - *v-show* display: none
+
+** The Vue instance
+  - *el* the element in the DOM we bind the Vue instance to
+  - *data* the data in our instance
+  - *methods* methods that manipulate our data
+  - *computed* cached computed properties of our data.
+* Assignments
+  We have a super slow environment, so we will be working with fiddles - it's a great playground.
+  [[https://jsfiddle.net/bonqus/z21jds04/][jsfiddle]]
+** Task
+   1. Each time you press the 'Increment' btn a new color class should be bound to the BOX.
+   2. Create a new btn and a new data field containing a boolean, each time you press the new btn the BOX should appear/disappear. 
+   3. Render a vertical list of all the items in 'anArray'. Use the v-for directive.
+   4. Render the color of each item as the background for that row.
+   5. Create a btn for each item called delete.
+   6. If you press the delete btn, that item should be removed.
+** Task
+   1. Create a new empty list, and a method that pushes a random color to that list, use the function below.
+   2. Create a btn that triggers your method.
+   3. Render a vertical list and the corresponding background, use the style attribute.
+   4. Create an input where you can write a color.
+   5. Create a btn that pushes the value of the input to your list and clears the input afterwards.
+   6. Add a delete btn for each item in the list.
+#+begin_src javascript
+"#" + Math.floor(Math.random()*16777215).toString(16)
+#+end_src
+** Task (extra)
+   *TODO APP requirements*
+   + See a list of tasks that are todo
+   + See a list of tasks that are done
+   + Add tasks
+   + Delete tasks
+   + Mark tasks as done
+   
+   Some quasar components you might find handy, but don't limit your self it's a huge library. 
+   + q-list
+   + q-item
+   + q-checkbox
+   + q-btn
+   + q-input
+   + q-dialog (a popup 'Are you sure you want to delete this task?')
+  
+[[https://jsfiddle.net/bonqus/esbdopaf/][A quick starter]]
+   
+* Resources
+** What is what
+  - [[https://vuejs.org/v2/guide/][Vue.js]] is a js framework.
+  - [[https://quasar.dev/][Quasar]] is a framework on top of Vue.js, we use it for its components.
+  - [[https://vuex.vuejs.org/][Vuex]] is a global data store for your application. You can store, get and mutate data, it works atomically.
+  - [[https://github.com/axios/axios][Axios]] is a js library used to make HTTP(S) requests. 
