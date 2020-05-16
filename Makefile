@@ -1,5 +1,6 @@
 ultimatedragons:
 	cd ultimatedragons.dk
-	git rebase
+	git pull --rebase
+	cd ..
 	git commit -m "$m"
 	git push -u origin master
